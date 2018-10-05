@@ -17,7 +17,8 @@ class WeatherList extends Component{
             //add key to the top element
             <tr key={name}>
                 <td>
-                  <GoogleMap lon={lon} lat={lat}/>
+                  {/* <GoogleMap lon={lon} lat={lat}/> */}
+                  {name}
                 </td>
                 <td><Chart data={temps} color="orange" unit='C'/></td>
                 <td><Chart data={pressures} color="green" unit='hPa' /></td>
@@ -40,6 +41,7 @@ class WeatherList extends Component{
             </thead>
             <tbody>
                 {this.props.weather.map(this.renderWeather)}
+                {name}
             </tbody>
             </table>
         )
